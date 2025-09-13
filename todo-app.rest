@@ -1,0 +1,47 @@
+@token=
+###
+GET http://localhost:5003
+
+### Register
+POST http://localhost:5003/auth/register
+Content-Type: application/json
+
+{
+    "email": "test123@gmail.com",
+    "password": "test123"
+}
+
+### Login
+POST http://localhost:5003/auth/login
+Content-Type: application/json
+
+{
+    "email": "test123@gmail.com",
+    "password": "test123"
+}
+
+### Fetch Todos(protected)
+GET http://localhost:5003/todos
+Authorization: {{token}}
+
+### Add Todo(protected)
+POST http://localhost:5003/todos
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "task": "Finish the to-do project"
+}
+
+### Update Todo(protected)
+PUT http://localhost:5003/todos/2
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "completed": 1
+}
+
+### Delete Todo(protected)
+DELETE http://localhost:5003/todos/2
+Authorization: {{token}}
