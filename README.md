@@ -55,5 +55,10 @@ Open `public/index.html` in your browser for a simple UI.
 - The database is in-memory and resets on server restart.
 - Make sure to use the correct JWT token in the `Authorization` header as `Bearer <token>` for protected routes.
 
+## Acknowledgments
+
+- Inspired by the [Backend Full Course | NodeJS ExpressJS PostgreSQL Prisma & Docker](https://www.youtube.com/watch?v=9BD9eK9VqXA) tutorial by [Smoljames](https://www.youtube.com/@smoljames).  
+- This project was created as a learning exercise, with adjustments and modifications made along the way.
+
 ## License
 MIT
